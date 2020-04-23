@@ -1,0 +1,233 @@
+//
+// Color system
+//
+
+$black: #000000;
+$white: #ffffff;
+$success: lighten(green, 10%);
+$gray-400: lighten($black, 40%);
+
+$arr-colors-name: ();
+$arr-colors-name: map-merge((
+), $arr-colors-name);
+
+$arr-colors-number: ();
+$arr-colors-number: map-merge((), $arr-colors-number);
+
+$theme-colors: ();
+$theme-colors: map-merge((), $theme-colors);
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-bg-level:                    0;
+$alert-border-level:                0;
+$alert-color-level:                 10;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $black;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $success;
+$link-decoration: none;
+$link-hover-color: darken($success, 5%);
+$link-hover-decoration: none;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji";
+$font-roboto: "Roboto",
+$font-family-sans-serif;
+$font-family-base: $font-roboto;
+
+// stylelint-enable value-keyword-case
+$spacer: 1rem;
+$spacer-px: 1px;
+$font-root: 14;
+$font-size-root: ($font-root * $spacer-px);
+$font-size-base: 1rem;
+$font-size-lg: (36 / $font-root * $spacer);
+$font-size-sm: (12 / $font-root * $spacer);
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$arr-font-weight: ();
+$arr-font-weight: map-merge(("light": $font-weight-light,
+  "normal": $font-weight-normal,
+  "medium": $font-weight-medium,
+  "black": $font-weight-black),
+  $arr-font-weight);
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+
+$h1-font-size: (60 / $font-root * $spacer); // 60px
+$h2-font-size: (48 / $font-root * $spacer); // 48px
+$h3-font-size: (36 / $font-root * $spacer); // 36px
+$h4-font-size: (32 / $font-root * $spacer); // 32px
+$h5-font-size: (28 / $font-root * $spacer); // 28px
+$h6-font-size: (24 / $font-root * $spacer); // 24px
+
+$arr-font-size: ();
+$arr-font-size: map-merge((
+  "0": (0 / $font-root * $spacer),
+  "10": (10 / $font-root * $spacer),
+  "11": (11 / $font-root * $spacer),
+  "12": (12 / $font-root * $spacer),
+  "13": (13 / $font-root * $spacer),
+  "14": (14 / $font-root * $spacer),
+  "16": (16 / $font-root * $spacer),
+  "18": (18 / $font-root * $spacer),
+  "20": (20 / $font-root * $spacer),
+  "24": $h6-font-size,
+  "28": $h5-font-size,
+  "30": (30 / $font-root * $spacer),
+  "32": $h4-font-size,
+  "36": $h3-font-size,
+  "48": $h2-font-size,
+  "60": $h1-font-size,
+  "80": (80 / $font-root * $spacer),
+  "160": (160 / $font-root * $spacer)),
+  $arr-font-size);
+
+$headings-font-weight: $font-weight-medium;
+$headings-line-height: 1.2;
+
+$arr-line-height: ();
+$arr-line-height: map-merge(("1": 1,
+  "base": $line-height-base,
+  "2": 2),
+  $arr-line-height);
+
+// Size margin, padding
+
+$mp: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$mp: map-merge((-50: (-50 / $font-root * $spacer),
+  -15: (-15 / $font-root * $spacer),
+  -10: (-10 / $font-root * $spacer),
+  0: 0,
+  1: ($spacer * 0.25),
+  2: ($spacer * 0.5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  12: (12 / $font-root * $spacer),
+  15: (15 / $font-root * $spacer),
+  16: (16 / $font-root * $spacer),
+  18: (18 / $font-root * $spacer),
+  20: (20 / $font-root * $spacer),
+  24: (24 / $font-root * $spacer),
+  25: (25 / $font-root * $spacer),
+  30: (30 / $font-root * $spacer),
+  40: (40 / $font-root * $spacer),
+  50: (50 / $font-root * $spacer),
+  60: (60 / $font-root * $spacer),
+  70: (70 / $font-root * $spacer),
+  90: (90 / $font-root * $spacer),
+  100: (100 / $font-root * $spacer)),
+  $mp);
+
+
+$sizes: ();
+$sizes: map-merge((
+  0: 0,
+  5: 5%,
+  10: 10%,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
+  45: 45%,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+  100: 100%,
+  auto: auto),
+  $sizes);
+
+$border-color: $gray-400;
+
+$border-radius: (4 / $font-root * $spacer);
+$border-radius-lg: (10 / $font-root * $spacer);
+$border-radius-xl: (20 / $font-root * $spacer);
+$border-radius-sm: (2 / $font-root * $spacer);
+
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow: 2px 2px 10px rgba($black, 0.2);;
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+
+$grid-gutter-width: 30px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+
+// Badges
+
+$badge-font-size: (12 / $font-root * $spacer);
+$badge-font-weight: $font-weight-medium;
+$badge-padding-y: (2 / $font-root * $spacer);
+$badge-padding-x: (10 / $font-root * $spacer);
+$badge-border-radius: $border-radius-sm;
+
+$badge-pill-padding-x: .6em;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius: 10rem;
+
+
+// Form validation
+
+// FontAwesome
+$fa-font-path: "../fonts/fontawesome/";
+$fa-font-size-base: $font-size-base;
+
+//
+// Root
+//
+
